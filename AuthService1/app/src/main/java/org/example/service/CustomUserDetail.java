@@ -18,6 +18,8 @@ public class CustomUserDetail extends UserInfo implements UserDetails {
     private final String username;
     private final String password;
     Collection<? extends GrantedAuthority> authorities;
+
+
     public CustomUserDetail(UserInfo userInfo) {
         this.username = userInfo.getUsername();
         this.password = userInfo.getPassword();
@@ -27,6 +29,8 @@ public class CustomUserDetail extends UserInfo implements UserDetails {
         }
         this.authorities = authorities;
     }
+
+
     @Override
     public String getUsername() {
         return username;
